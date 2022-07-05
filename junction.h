@@ -4,18 +4,20 @@ using namespace std;
 
 class junction{
     public:
-        //생성자
-        junction();
         //멤버 변수
-        int a;
-        int b;
+        const char* jnumber;
+        station* soj; //station of the junction : 정션으로부터 어느 역의 정션인지 참조 가능
+
+        //생성자
+        junction(const char* jnumv, station* sojv); //junction number value, soj value
+
         //멤버 메서드
     private:
         //멤버 변수
         //멤버 메서드
 };
 
-junction::junction(){
-    a = 0;
-    b = 0;
+junction::junction(const char* jnumv, station* sojv){
+    jnumber = jnumv;
+    soj = sojv;
 }

@@ -5,11 +5,12 @@ using namespace std;
 #include "station.h"
 
 int main(void){
-    //station s1;
     station s2("k326", "일산");
-
-    //cout << s1.snumber << s1.sname << endl;
     cout << s2.snumber << s2.sname << endl;
+
+    junction j1("j1", s2);
+
+    cout << j1.jnumber << endl;
 
     return 0;
 }
