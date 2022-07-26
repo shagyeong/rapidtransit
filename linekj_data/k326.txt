@@ -1,0 +1,88 @@
+유향트랙
+플랫폼트랙 : 6
+단방향 쓰루트랙 : 0
+섹션트랙 : 2
+유향 연결트랙 : 16
+
+무향트랙
+양방향 쓰루트랙 : 0
+주박트랙 : 1
+무향 연결트랙 : 2
+
+유향정션
+플랫폼정션 : 12
+유향 연결정션 : 10
+
+무향정션
+무향 연결정션 : 2
+
+tpu01
+tpu02
+tpu03
+tpd01
+tpd02
+tpd03
+
+-
+
+tsu01
+tsd02
+
+tcu01
+tcu02
+tcu03
+tcu04
+tcu05
+tcu06
+tcu07
+tcu08
+tcd01
+tcd02
+tcd03
+tcd04
+tcd05
+tcd06
+tcd07
+tcd08
+
+-
+
+tdx01
+
+tcx01
+tcx02
+
+jpu01
+jpu02
+jpu03
+jpu04
+jpu05
+jpu06
+jpd01
+jpd02
+jpd03
+jpd04
+jpd05
+jpd06
+jcu01
+jcu02
+jcu03
+jcu04
+jcu05
+jcd01
+jcd02
+jcd03
+jcd04
+jcd05
+jcx01
+jcx02
+
+                       tcu04 jpu03 tpu03 jpu06 tcu07
+           tcu02 jcu02 tcu03 jpu02 tpu02 jpu05 tcu06 jcu03 tcu08
+     jcu01 tcu01             jpu01 tpu01 jpu04 tcu05             jcu04 tcu09 jcu05 tsu01
+                                                                       tcx01
+                                                                             jcx01 tdx01 jcx02
+                                                                       tcx02
+tsd01 jcd05             tcd06 jpd01 tpd01 jpd04             tcd02 jcd02 tcd01 jcd01
+           tcd09 jcd04 tcd07 jpd02 tpd02 jpd05 tcd04 jcd03 tcd03
+                       tcd08 jpd03 tpd03 jpd06 tcd05
