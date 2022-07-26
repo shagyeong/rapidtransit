@@ -1,3 +1,21 @@
+일산 : k326
+                        jcx02 
+            tsu01       tdx01
+            jcu05       jcx01       jcd01
+            tcu09 tcx01       tcx02 tcd01
+            jcu04                   jcd02
+      tcu08                         tcd02 tcd03
+      jcu03                               jcd03
+tcu07 tcu06 tcu05                         tcd04 tcd05
+jpu06 jpu05 jpu04                   jpd01 jpd02 jpd03
+tpu03 tpu02 tpu01                   tpd01 tpd02 tpd03
+jpu03 jpu02 jpu01                   jpd04 jpd05 jpd06
+tcu04 tcu03                         tcd06 tcd07 tcd08
+      jcu02                               jcd04
+      tcu02 tcu01                         tcd09
+            jcu01                   jcd05
+                                    tsd01
+
 유향트랙
 플랫폼트랙 : 6
 단방향 쓰루트랙 : 0
@@ -76,13 +94,3 @@ jcd04
 jcd05
 jcx01
 jcx02
-
-                       tcu04 jpu03 tpu03 jpu06 tcu07
-           tcu02 jcu02 tcu03 jpu02 tpu02 jpu05 tcu06 jcu03 tcu08
-     jcu01 tcu01             jpu01 tpu01 jpu04 tcu05             jcu04 tcu09 jcu05 tsu01
-                                                                       tcx01
-                                                                             jcx01 tdx01 jcx02
-                                                                       tcx02
-tsd01 jcd05             tcd06 jpd01 tpd01 jpd04             tcd02 jcd02 tcd01 jcd01
-           tcd09 jcd04 tcd07 jpd02 tpd02 jpd05 tcd04 jcd03 tcd03
-                       tcd08 jpd03 tpd03 jpd06 tcd05
