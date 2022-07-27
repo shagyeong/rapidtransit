@@ -1,25 +1,47 @@
-//역 클래스
+#pragma once
 #include<iostream>
+#include<string>
+#include "track.h"
+#include "junction.h"
 using namespace std;
 
 class station{
     public:
-        //생성자
-        station(const char* snumv, const char* snamev);
+        station(string snamev, string snumberv, junction* j0v, track* t00v);
 
-        //멤버 변수
-        //ISO C++ forbids converting a string constant to ‘char*’
-        //char*에서 const char*로 변경함
-        const char* snumber; //station number : 역 번호
-        const char* sname; //station name : 역명
+        string getsname(void);
+        string getsnumber(void);
+        junction* getj0(void);
+        track* gett00(void);
 
-        //멤버 메서드    
+        void transit(junction* transit0); //정션으로 정차 위치 지정-가중치(트랙)의 거리를 차례로 출력
     private:
+        string sname;
+        string snumber;
+        junction* j0;
+        track* t00; //가중치 그래프 인접 행렬의 첫 번재 요소임
 };
 
-//생성자
-station::station(const char* snumv, const char* snamev){
-    snumber = snumv;
+station::station(string snamev, string snumberv, junction* j0v, track* t00v){
     sname = snamev;
+    snumber = snumberv;
+    j0 = j0v;
+    t00 = t00v;
 }
-//멤버 메서드
+
+string station::getsname(void){
+    return sname;
+}
+string station::getsnumber(void){
+    return snumber;
+}
+junction* station::getj0(void){
+    return j0;
+}
+track* station::gett00(void){
+    return t00;
+}
+
+void transit(junction* transit0){
+    
+}
