@@ -3,6 +3,7 @@ using namespace std;
 
 #include "junction.h"
 #include "station.h"
+#include "null.h"
 
 int main(void){
     //k329 : 운정역
@@ -25,24 +26,42 @@ int main(void){
     track tcd03("tcd03", 9, true);
     track tcd04("tcd04", 10, true);
 
-    junction jpu01("jpu01", true);
-    junction jpu02("jpu02", true);
-    junction jpu03("jpu03", true);
-    junction jpu04("jpu04", true);
-    junction jpd01("jpd01", true);
-    junction jpd02("jpd02", true);
-    junction jpd03("jpd03", true);
-    junction jpd04("jpd04", true);
+    unijunction jpu01("jpu01", true, NJ, tpu01);
+    unijunction jpu02("jpu02", true, NJ, tpu02);
+    unijunction jpu03("jpu03", true, NJ, tcu03);
+    unijunction jpu04("jpu04", true, NJ, tcu04);
+    unijunction jpd01("jpd01", true, NJ, tpd01);
+    unijunction jpd02("jpd02", true, NJ, tpd02);
+    unijunction jpd03("jpd03", true, NJ, tcd03);
+    unijunction jpd04("jpd04", true, NJ, tcd04);
 
-    junction jcu01("jcu01", true);
-    junction jcu02("jcu02", true);
-    junction jcd01("jcd01", true);
-    junction jcd02("jcd02", true);
+    bijunction jcu01("jcu01", true, NJ, tcu01, NJ, tcu02);
+    unijunction jcu02("jcu02", true, NJ, tsu01);
+    bijunction jcd01("jcd01", true, NJ, tcd01, NJ, tcd02);
+    unijunction jcd02("jcd02", true, NJ, tsd01);
+    
+    jpu01.setjunction1(jpu03);
+    jpu02.setjunction1(jpu04);
+    jpu03.setjunction1(jcu02);
+    jpu04.setjunction1(jcu02);
+    jpd01.setjunction1(jpd03);
+    jpd02.setjunction1(jpd04);
+    jpd03.setjunction1(jcd02);
+    jpd04.setjunction1(jcd02);
+    jcu01.setjunction1(jpu01);jcu01.setjunction2(jpu02);
+    //jcu02.setjunction1(); 다음역의 정션을 가리킴
+    jcd01.setjunction1(jpd01);jcd01.setjunction2(jpd02);
+    //jcd02.setjunction1(); 다음역의 정션을 가리킴
 
-    junction k329_junctions[] = {
-        jcu01, jpu01, jpu02, jpu03, jpu04, jcu02,
-        jcd01, jpd01, jpd02, jpd03, jpd04, jcd02
-    };
+//    //운정역 상행 1선 정차
+//    //jcu01-jpu01-jpu03-jcu02
+//
+//    bijunction iter = jcu01;
+//
+//    cout << iter.gettrack1().getlength() << endl;
+//
+//    iter = jcu01.getjunction1();
+
 
     return 0;
 }
