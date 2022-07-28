@@ -19,14 +19,14 @@ class station{
         string sname;
         string snumber;
         junction* j0;
-        track* t00; //가중치 그래프 인접 행렬의 첫 번재 요소임
+        track* t0;
 };
 
-station::station(string snamev, string snumberv, junction* j0v, track* t00v){
+station::station(string snamev, string snumberv, junction* j0v, track* t0v){
     sname = snamev;
     snumber = snumberv;
     j0 = j0v;
-    t00 = t00v;
+    t0 = t0v;
 }
 
 string station::getsname(void){
@@ -39,7 +39,7 @@ junction* station::getj0(void){
     return j0;
 }
 track* station::gett00(void){
-    return t00;
+    return t0;
 }
 
 void transit(junction* transit0){
