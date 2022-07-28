@@ -5,6 +5,7 @@ using namespace std;
 
 class junction{
     public:
+        junction();
         junction(string namev, bool directionv);
 
         string getname(void);
@@ -13,6 +14,10 @@ class junction{
         bool direction; //유향/무향
 };
 
+junction::junction(){
+    name = "no named junction";
+    direction = NULL;
+}
 junction::junction(string namev, bool directionv){
     name = namev;
     direction = directionv;
@@ -28,7 +33,7 @@ string junction::getname(void){
 
 class unijunction : public junction{
     public:
-        unijunction();
+        unijunction(string namev, bool directionv, junction junction1v, track track1v):junction(namev, directionv){junction1 = junction1v, track1 = track1v};
     private:
         //다음 정션과 가중치
         junction junction1;
@@ -37,7 +42,12 @@ class unijunction : public junction{
 
 class bijunction : public junction{
     public:
-        bijunction();
+        bijunction(
+            string namev,
+            bool directionv,
+            junction junction1v, track track1v,
+            junction junction2v, track track2v
+        );
     private:
         //좌측 정션과 가중치
         junction junction1;
@@ -50,7 +60,13 @@ class bijunction : public junction{
 
 class trijunction : public junction{
     public:
-        trijunction();
+        trijunction(
+            string namev,
+            bool directionv,
+            junction junction1v, track track1v,
+            junction junction2v, track track2v,
+            junction junction3v, track track3v
+        );
     private:
         //좌측 정션과 가중치
         junction junction1;
