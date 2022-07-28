@@ -2,9 +2,9 @@
       tsu01
       jcu02 jcd01
 tcu04 tcu03 tcd01 tcd02
-jpu04 jpu03 jpd03 jpd04
+jpu04 jpu03 jpd01 jpd02
 tpu02 tpu01 tpd01 tpd02
-jpu02 jpu01 jpd01 jpd02
+jpu02 jpu01 jpd03 jpd04
 tcu02 tcu01 tcd03 tcd04
       jcu01 jcd02
             tsd01
