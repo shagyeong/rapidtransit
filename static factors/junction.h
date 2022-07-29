@@ -79,7 +79,7 @@ unijunction::unijunction(
 }
 
 void unijunction::setjunction1(junction junction1v){
-    junction1 = junction1;
+    junction1 = junction1v;
 }
 void unijunction::settrack1(track track1v){
     track1 = track1;

@@ -53,15 +53,13 @@ int main(void){
     jcd01.setjunction1(jpd01);jcd01.setjunction2(jpd02);
     //jcd02.setjunction1(); 다음역의 정션을 가리킴
 
-//    //운정역 상행 1선 정차
-//    //jcu01-jpu01-jpu03-jcu02
-//
-//    bijunction iter = jcu01;
-//
-//    cout << iter.gettrack1().getlength() << endl;
-//
-//    iter = jcu01.getjunction1();
+    //운정역 상행 1선 정차
+    //jcu01-jpu01-jpu03-jcu02
 
+    cout << (jcu01.gettrack1()).getname() << endl;
+    cout << (jcu01.getjunction1()).getname() << endl;
+    cout << jcu01.getname() << endl;
+    //상속 클래스의 생성자 호출 수정 요함
 
     return 0;
 }
