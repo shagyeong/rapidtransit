@@ -5,6 +5,8 @@
 using namespace std;
 
 int main(void){
+    //운정 : k329
+    //운정역 트랙 선언
     track tpu01("tpu01", 200, true);
     track tpu02("tpu02", 200, true);
 
@@ -15,6 +17,7 @@ int main(void){
     track tcu03("tcu03", 3, true);
     track tcu04("tcu04", 4, true);
 
+    //운정역 정션 선언
     junction jpu01("jpu01", true);
     junction jpu02("jpu02", true);
     junction jpu03("jpu03", true);
@@ -33,28 +36,8 @@ int main(void){
     jpu04.settrack1(&tcu04); jpu03.setjunction1(&jcu02);
 
     jcu02.settrack1(&tsu01);
-    //2면 4선 상대식 1선정차
-    //jcu01 jpu01 jpu03 jcu02
-    junction iter = jcu01;
 
-    cout << iter.getname() << endl;
-    cout << (*iter.gettrack1()).getlength() << endl;
-    cout << endl;
-
-    iter = *iter.getjunction1();
-    cout << iter.getname() << endl;
-    cout << (*iter.gettrack1()).getlength() << endl;
-    cout << endl;
-
-    iter = *iter.getjunction1();
-    cout << iter.getname() << endl;
-    cout << (*iter.gettrack1()).getlength() << endl;
-    cout << endl;
-
-    iter = *iter.getjunction1();
-    cout << iter.getname() << endl;
-    cout << (*iter.gettrack1()).getlength() << endl;
-    cout << endl;
+    station k329("운정", "k329");
 
     return 0;
 }

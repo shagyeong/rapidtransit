@@ -8,6 +8,7 @@ class junction{
         junction();
         junction(string namev, bool directionv);
         junction(const junction& junctionv);
+        //~junction(); //double free or corruption 오류
 
         void setname(string namev);
         void setdirection(bool directionv);
@@ -50,6 +51,11 @@ junction::junction(const junction& junctionv){
     junction2 = junctionv.junction2; track2 = junctionv.track2;
     junction3 = junctionv.junction3; track3 = junctionv.track3;
 }
+//junction::~junction(){
+//    delete junction1; delete track1;
+//    delete junction2; delete track2;
+//    delete junction3; delete track3;
+//}
 
 void junction::setname(string namev){
     name = namev;
