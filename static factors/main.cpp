@@ -7,8 +7,8 @@ using namespace std;
 int main(void){
     //운정 : k329
     //운정역 트랙 선언
-    track tpu01("tpu01", 200, true);
-    track tpu02("tpu02", 200, true);
+    platformtrack tpu01("tpu01", 200, true, 3, 8, true);
+    platformtrack tpu02("tpu02", 200, true, 4, 8, false);
 
     track tsu01("tsu01", 1500, true);
 
@@ -38,6 +38,8 @@ int main(void){
     jcu02.settrack1(&tsu01);
 
     station k329("운정", "k329");
+
+    cout << (*jpu01.gettrack1()).getdirection() << endl;
 
     return 0;
 }

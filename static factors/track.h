@@ -19,6 +19,7 @@ class track{
         string name;
         int length;
         bool direction; //true : 유향, false : 무향
+        friend class platformtrack;
 };
 track::track(){
     name = "no named track";
@@ -64,11 +65,28 @@ bool track::getdirection(void){
 //platformtrack : 역내 플랫폼과 대응되는 트랙-------------------------------------------------------------------------
 class platformtrack : public track{
     public:
+        platformtrack(string namev, int lengthv, bool directionv, int numberv, int carv, bool doorv)
+        :track(namev, lengthv, directionv){
+            number = numberv;
+            car = carv;
+            door = doorv;
+        }
+        
+        void setnumber(int numberv);
+        void setcar(int carv);
+        void setdoor(bool doorv);
+    
+        int getnumber(void);
+        int getcar(void);
+        bool getdoor(void);
     private:
         int number; //플랫폼 번호
         int car; //대응 칸수
         bool door; //true : 왼쪽 문열림, false : 오른쪽 문열림
+        friend class track;
 };
+
+
 
 //throughtrack : 역내 통과 트랙-------------------------------------------------------------------------
 class throughtrack : public track{
