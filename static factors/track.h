@@ -15,11 +15,12 @@ class track{
         string getname(void);
         int getlength(void);
         bool getdirection(void);
+
+        virtual void hello(void) = 0; //dynamic cast의 다형성을 갖추기 위한(가상함수 테이블 생성용)
     private:
         string name;
         int length;
         bool direction; //true : 유향, false : 무향
-        friend class platformtrack;
 };
 track::track(){
     name = "no named track";
@@ -79,13 +80,37 @@ class platformtrack : public track{
         int getnumber(void);
         int getcar(void);
         bool getdoor(void);
+
+        void hello(void);
     private:
         int number; //플랫폼 번호
         int car; //대응 칸수
         bool door; //true : 왼쪽 문열림, false : 오른쪽 문열림
-        friend class track;
 };
 
+void platformtrack::setnumber(int numberv){
+    number = numberv;
+}
+void platformtrack::setcar(int carv){
+    car = carv;
+}
+void platformtrack::setdoor(bool doorv){
+    door = doorv;
+}
+    
+int platformtrack::getnumber(void){
+    return number;
+}
+int platformtrack::getcar(void){
+    return car;
+}
+bool platformtrack::getdoor(void){
+    return door;
+}
+
+void platformtrack::hello(void){
+
+}
 
 
 //throughtrack : 역내 통과 트랙-------------------------------------------------------------------------
