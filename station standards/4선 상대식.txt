@@ -1,23 +1,3 @@
-좌측통행
-        tsu01
-        jcu02 jcd01
-tcu04   tcu03 tcd01   tcd02
-jpu04 p jpu03 jpd01 p jpd02
-tpu02 p tpu01 tpd01 p tpd02
-jpu02 p jpu01 jpd03 p jpd04
-tcu02   tcu01 tcd03   tcd04
-        jcu01 jcd02
-              tsd01
-우측통행
-              tsu01
-        jcd01 jcu02
-tcd02   tcd01 tcu03   tcu04
-jpd02 p jpd01 jpu03 p jpu04
-tpd02 p tpd01 tpu01 p tpu02
-jpd04 p jpd03 jpu01 p jpu02
-tcd04   tcd03 tcu01   tcu02
-        jcd02 jcu01
-        tsd01
 유향트랙
 플랫폼트랙 : 4
 단방향 쓰루트랙 : 0
@@ -35,3 +15,55 @@ tcd04   tcd03 tcu01   tcu02
 
 무향정션 
 무향 연결정션 : 0
+
+좌측통행
+        tsu01
+        jcu02 jcd01
+tcu04   tcu03 tcd01   tcd02
+jpu04 p jpu03 jpd01 p jpd02
+tpu02 p tpu01 tpd01 p tpd02
+jpu02 p jpu01 jpd03 p jpd04
+tcu02   tcu01 tcd03   tcd04
+        jcu01 jcd02
+              tsd01
+
+//선언-상행
+track tpu01("tpu01", 70, 200, true);
+track tpu02("tpu02", 70, 200, true);
+
+track tsu01("tsu01", 120, 1500, true);
+
+track tcu01("tcu01", 70, 1, true);
+track tcu02("tcu02", 70, 2, true);
+track tcu03("tcu03", 70, 3, true);
+track tcu04("tcu04", 70, 4, true);
+
+junction jpu01("jpu01", true);
+junction jpu02("jpu02", true);
+junction jpu03("jpu03", true);
+junction jpu04("jpu04", true);
+
+junction jcu01("jcu01", true);
+junction jcu02("jcu02", true);
+//포인팅-상행
+jcu01.settrack1(&tcu01); jcu01.setjunction1(&jpu01);
+jcu01.settrack2(&tcu02); jcu01.setjunction2(&jpu02);
+
+jpu01.settrack1(&tpu01); jpu01.setjunction1(&jpu03);
+jpu02.settrack1(&tpu02); jpu02.setjunction1(&jpu04);
+
+jpu03.settrack1(&tcu03); jpu03.setjunction1(&jcu02);
+jpu04.settrack1(&tcu04); jpu03.setjunction1(&jcu02);
+
+jcu02.settrack1(&tsu01);
+
+우측통행
+              tsu01
+        jcd01 jcu02
+tcd02   tcd01 tcu03   tcu04
+jpd02 p jpd01 jpu03 p jpu04
+tpd02 p tpd01 tpu01 p tpu02
+jpd04 p jpd03 jpu01 p jpu02
+tcd04   tcd03 tcu01   tcu02
+        jcd02 jcu01
+        tsd01

@@ -1,16 +1,3 @@
-좌측통행
-  tsu01
-p jpu02 jpd01 p
-p tpu01 tpd01 p
-p jpu01 jpd02 p
-        tsd01
-우측통행
-        tsu01 
-p jpd01 jpu02 p
-p tpd01 tpu01 p
-p jpd02 jpu01 p
-  tsd01
-
 유향트랙
 플랫폼트랙 : 2
 단방향 쓰루트랙 : 0
@@ -28,3 +15,38 @@ p jpd02 jpu01 p
 
 무향정션 
 무향 연결정션 : 0
+
+좌측통행
+  tsu01
+p jpu02 jpd01 p
+p tpu01 tpd01 p
+p jpu01 jpd02 p
+        tsd01
+//선언 : 상행
+junction jpu01("jpu01", true);
+junction jpu02("jpu02", true);
+
+track tpu01("tpu01", 70, 200, true);
+
+track tsu01("tsu01", 70, 1500, true);
+//선언 : 하행
+junction jpd01("jpd01", true);
+junction jpd02("jpd02", true);
+
+track tpd01("tpd01", 70, 200, true);
+
+track tsd01("tsd01", 70, 1500, true);
+
+//포인팅 : 상행
+jpu01.settrack1(&tpu01);jpu01.setjunction1(&jpu02);
+jpu02.settrack1(&tsu01);
+//포인팅 : 하행
+jpd01.settrack1(&tpd01);jpd01.setjunction1(&jpd02);
+jpd02.settrack1(&tsd01);
+
+우측통행
+        tsu01 
+p jpd01 jpu02 p
+p tpd01 tpu01 p
+p jpd02 jpu01 p
+  tsd01
