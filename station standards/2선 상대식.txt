@@ -29,6 +29,10 @@ junction jpu02("jpu02", true);
 track tpu01("tpu01", 70, 200, true);
 
 track tsu01("tsu01", 70, 1500, true);
+//포인팅 : 상행
+jpu01.settrack1(&tpu01);jpu01.setjunction1(&jpu02);
+jpu02.settrack1(&tsu01);
+
 //선언 : 하행
 junction jpd01("jpd01", true);
 junction jpd02("jpd02", true);
@@ -36,10 +40,6 @@ junction jpd02("jpd02", true);
 track tpd01("tpd01", 70, 200, true);
 
 track tsd01("tsd01", 70, 1500, true);
-
-//포인팅 : 상행
-jpu01.settrack1(&tpu01);jpu01.setjunction1(&jpu02);
-jpu02.settrack1(&tsu01);
 //포인팅 : 하행
 jpd01.settrack1(&tpd01);jpd01.setjunction1(&jpd02);
 jpd02.settrack1(&tsd01);

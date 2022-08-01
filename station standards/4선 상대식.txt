@@ -56,6 +56,35 @@ jpu03.settrack1(&tcu03); jpu03.setjunction1(&jcu02);
 jpu04.settrack1(&tcu04); jpu03.setjunction1(&jcu02);
 
 jcu02.settrack1(&tsu01);
+//선언-하행
+track tpd01("tpd01", 70, 200, true);
+track tpd02("tpd02", 70, 200, true);
+
+track tsd01("tsd01", 120, 1500, true);
+
+track tcd01("tcd01", 70, 1, true);
+track tcd02("tcd02", 70, 2, true);
+track tcd03("tcd03", 70, 3, true);
+track tcd04("tcd04", 70, 4, true);
+
+junction jpd01("jpud1", true);
+junction jpd02("jpud2", true);
+junction jpd03("jpud3", true);
+junction jpd04("jpud4", true);
+
+junction jcd1("jcd01", true);
+junction jcd2("jcd02", true);
+//포인팅-하행
+jcd01.settrack1(&tcd01); jcd01.setjunction1(&jpd01);
+jcd01.settrack2(&tcd02); jcd01.setjunction2(&jpd02);
+
+jpd01.settrack1(&tpd01); jpd01.setjunction1(&jpd03);
+jpd02.settrack1(&tpd02); jpd02.setjunction1(&jpd04);
+
+jpd03.settrack1(&tcd03); jpd03.setjunction1(&jcd02);
+jpd04.settrack1(&tcd04); jpd03.setjunction1(&jcd02);
+
+jcd02.settrack1(&tsd01);
 
 우측통행
               tsu01
