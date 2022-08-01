@@ -5,62 +5,93 @@
 using namespace std;
 
 int main(void){
-    //운정 : k329
-    //운정역 트랙 선언
-    track tpu01("tpu01", 70, 200, true);
-    track tpu02("tpu02", 70, 200, true);
+    //서울 133
+    track l133_tpu01("l133_tpu01", 70,  200, true);   track l133_tpd01("l133_tpd01", 70,  200, true);
+    track l133_tsu01("l133_tsu01", 70, 1500, true);   track l133_tsd01("l133_tsd01", 70, 1500, true);
 
-    track tsu01("tsu01", 120, 1500, true);
+    junction l133_jpu01("l133_jpu01", true);          junction l133_jpd01("l133_jpd01", true);
+    junction l133_jpu02("l133_jpu02", true);          junction l133_jpd02("l133_jpd02", true);
 
-    track tcu01("tcu01", 70, 1, true);
-    track tcu02("tcu02", 70, 2, true);
-    track tcu03("tcu03", 70, 3, true);
-    track tcu04("tcu04", 70, 4, true);
+    l133_jpu01.settrack1(&l133_tpu01);                l133_jpd01.settrack1(&l133_tpd01);
+    l133_jpu01.setjunction1(&l133_jpu02);             l133_jpd01.setjunction1(&l133_jpd02);
 
-    //운정역 정션 선언
-    junction jpu01("jpu01", true);
-    junction jpu02("jpu02", true);
-    junction jpu03("jpu03", true);
-    junction jpu04("jpu04", true);
+    l133_jpu02.settrack1(&l133_tsu01);                l133_jpd02.settrack1(&l133_tsd01);
 
-    junction jcu01("jcu01", true);
-    junction jcu02("jcu02", true);
+    station l133("서울", "133");
+    l133.setjufirst(&l133_jpu01);
+    l133.setjulast(&l133_jpu02);
+    l133.setjdfirst(&l133_jpd01);
+    l133.setjdlast(&l133_jpd02);
 
-    jcu01.settrack1(&tcu01); jcu01.setjunction1(&jpu01);
-    jcu01.settrack2(&tcu02); jcu01.setjunction2(&jpu02);
+    //시청 132
+    track l132_tpu01("l132_tpu01", 70,  200, true);   track l132_tpd01("l132_tpd01", 70,  200, true);
+    track l132_tsu01("l132_tsu01", 70, 1500, true);   track l132_tsd01("l132_tsd01", 70, 1500, true);
 
-    jpu01.settrack1(&tpu01); jpu01.setjunction1(&jpu03);
-    jpu02.settrack1(&tpu02); jpu02.setjunction1(&jpu04);
+    junction l132_jpu01("l132_jpu01", true);          junction l132_jpd01("l132_jpd01", true);
+    junction l132_jpu02("l132_jpu02", true);          junction l132_jpd02("l132_jpd02", true);
 
-    jpu03.settrack1(&tcu03); jpu03.setjunction1(&jcu02);
-    jpu04.settrack1(&tcu04); jpu03.setjunction1(&jcu02);
+    l132_jpu01.settrack1(&l132_tpu01);                l132_jpd01.settrack1(&l132_tpd01);
+    l132_jpu01.setjunction1(&l132_jpu02);             l132_jpd01.setjunction1(&l132_jpd02);
 
-    jcu02.settrack1(&tsu01);
+    l132_jpu02.settrack1(&l132_tsu01);                l132_jpd02.settrack1(&l132_tsd01);
 
-    station k329("운정", "k329");
+    station l132("시청", "132");
+    l132.setjufirst(&l132_jpu01);
+    l132.setjulast(&l132_jpu02);
+    l132.setjdfirst(&l132_jpd01);
+    l132.setjdlast(&l132_jpd02);
 
-    //4선 상대식 1선 정차
-    //jcu01-jpu01-jpu03-jcu02
-    junction iter = jcu01;
+    //종각 131
+    track l131_tpu01("l131_tpu01", 70,  200, true);   track l131_tpd01("l131_tpd01", 70,  200, true);
+    track l131_tsu01("l131_tsu01", 70, 1500, true);   track l131_tsd01("l131_tsd01", 70, 1500, true);
 
-    cout << iter.getname() << endl;
-    cout << iter.gettrack1()->getname() << endl;
-    cout << endl;
+    junction l131_jpu01("l131_jpu01", true);          junction l131_jpd01("l131_jpd01", true);
+    junction l131_jpu02("l131_jpu02", true);          junction l131_jpd02("l131_jpd02", true);
 
-    iter = *iter.getjunction1();
-    cout << iter.getname() << endl;
-    cout << iter.gettrack1()->getname() << endl;
-    cout << endl;
+    l131_jpu01.settrack1(&l131_tpu01);                l131_jpd01.settrack1(&l131_tpd01);
+    l131_jpu01.setjunction1(&l131_jpu02);             l131_jpd01.setjunction1(&l131_jpd02);
 
-    iter = *iter.getjunction1();
-    cout << iter.getname() << endl;
-    cout << iter.gettrack1()->getname() << endl;
-    cout << endl;
+    l131_jpu02.settrack1(&l131_tsu01);                l131_jpd02.settrack1(&l131_tsd01);
 
-    iter = *iter.getjunction1();
-    cout << iter.getname() << endl;
-    cout << iter.gettrack1()->getname() << endl;
-    cout << endl;
+    station l131("종각", "131");
+    l131.setjufirst(&l131_jpu01);
+    l131.setjulast(&l131_jpu02);
+    l131.setjdfirst(&l131_jpd01);
+    l131.setjdlast(&l131_jpd02);
+
+    //종로 130
+    track l130_tpu01("l130_tpu01", 70,  200, true);   track l130_tpd01("l130_tpd01", 70,  200, true);
+    track l130_tsu01("l130_tsu01", 70, 1500, true);   track l130_tsd01("l130_tsd01", 70, 1500, true);
+
+    junction l130_jpu01("l130_jpu01", true);          junction l130_jpd01("l130_jpd01", true);
+    junction l130_jpu02("l130_jpu02", true);          junction l130_jpd02("l130_jpd02", true);
+
+    l130_jpu01.settrack1(&l130_tpu01);                l130_jpd01.settrack1(&l130_tpd01);
+    l130_jpu01.setjunction1(&l130_jpu02);             l130_jpd01.setjunction1(&l130_jpd02);
+
+    l130_jpu02.settrack1(&l130_tsu01);                l130_jpd02.settrack1(&l130_tsd01);
+
+    station l130("종로", "130");
+    l130.setjufirst(&l130_jpu01);
+    l130.setjulast(&l130_jpu02);
+    l130.setjdfirst(&l130_jpd01);
+    l130.setjdlast(&l130_jpd02);
+
+    l133.setupstation(l132);
+    l132.setupstation(l131);
+    l131.setupstation(l130);
+
+    junction* iter = l133.getjufirst();
+    junction* cond = l130.getjulast();
+
+    while(iter != cond){
+        cout << iter->getname() << endl;
+        cout << iter->gettrack1()->getname() << " : ";
+        cout << iter->gettrack1()->getlength() << "m" << endl;
+        cout << endl;
+
+        iter = iter->getjunction1();
+    }
 
     return 0;
 }

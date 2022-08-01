@@ -12,8 +12,8 @@ class station{
 
         void transit(junction* transit0); //정션으로 정차 위치 지정-가중치(트랙)의 거리를 차례로 출력
 
-        void setupsation(station upsatation); //단위역 이어붙이기-상행
-        void setdownstation(station downstationi); //단위역 이어붙이기-하행
+        void setupstation(station upsatation); //단위역 이어붙이기-상행
+        void setdownstation(station downstation); //단위역 이어붙이기-하행
 
         void setname(string namev);
         void setnumber(string numberv);
@@ -54,6 +54,16 @@ station::station(string namev, string numberv){
     julast = NULL;
     jdfirst = NULL;
     jdlast = NULL;
+}
+
+void station::setupstation(station upsatation){
+    julast->setjunction1(upsatation.getjufirst());
+    upsatation.jdlast->setjunction1(jdfirst);
+}
+void station::setdownstation(station downstation){
+    jdlast->setjunction1(downstation.getjdfirst());
+    downstation.julast->setjunction1(jufirst);
+    
 }
 
 void station::setname(string namev){
