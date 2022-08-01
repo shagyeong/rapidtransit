@@ -10,6 +10,11 @@ class station{
         station();
         station(string namev, string numberv);
 
+        void transit(junction* transit0); //정션으로 정차 위치 지정-가중치(트랙)의 거리를 차례로 출력
+
+        void setupsation(station upsatation); //단위역 이어붙이기-상행
+        void setdownstation(station downstationi); //단위역 이어붙이기-하행
+
         void setname(string namev);
         void setnumber(string numberv);
         void setjufirst(junction* jufirstv);
@@ -23,12 +28,11 @@ class station{
         junction* getjulast(void);
         junction* getjdfirst(void);
         junction* getjdlast(void);
-
-        void transit(junction* transit0); //정션으로 정차 위치 지정-가중치(트랙)의 거리를 차례로 출력
     private:
         string name; //역명
         string number; //역번
         
+        //1선
         junction* jufirst; //상행 첫 정션
         junction* julast; //상행 마지막 정션
         junction* jdfirst; //하행 첫 정션

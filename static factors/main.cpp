@@ -7,15 +7,15 @@ using namespace std;
 int main(void){
     //운정 : k329
     //운정역 트랙 선언
-    platformtrack tpu01("tpu01", 200, true, 3, 8, true);
-    platformtrack tpu02("tpu02", 200, true, 4, 8, false);
+    track tpu01("tpu01", 70, 200, true);
+    track tpu02("tpu02", 70, 200, true);
 
-    platformtrack tsu01("tsu01", 1500, true, 0, 0, false);
+    track tsu01("tsu01", 120, 1500, true);
 
-    platformtrack tcu01("tcu01", 1, true, 0, 0, false);
-    platformtrack tcu02("tcu02", 2, true, 0, 0, false);
-    platformtrack tcu03("tcu03", 3, true, 0, 0, false);
-    platformtrack tcu04("tcu04", 4, true, 0, 0, false);
+    track tcu01("tcu01", 70, 1, true);
+    track tcu02("tcu02", 70, 2, true);
+    track tcu03("tcu03", 70, 3, true);
+    track tcu04("tcu04", 70, 4, true);
 
     //운정역 정션 선언
     junction jpu01("jpu01", true);
@@ -38,6 +38,29 @@ int main(void){
     jcu02.settrack1(&tsu01);
 
     station k329("운정", "k329");
+
+    //4선 상대식 1선 정차
+    //jcu01-jpu01-jpu03-jcu02
+    junction iter = jcu01;
+
+    cout << iter.getname() << endl;
+    cout << iter.gettrack1()->getname() << endl;
+    cout << endl;
+
+    iter = *iter.getjunction1();
+    cout << iter.getname() << endl;
+    cout << iter.gettrack1()->getname() << endl;
+    cout << endl;
+
+    iter = *iter.getjunction1();
+    cout << iter.getname() << endl;
+    cout << iter.gettrack1()->getname() << endl;
+    cout << endl;
+
+    iter = *iter.getjunction1();
+    cout << iter.getname() << endl;
+    cout << iter.gettrack1()->getname() << endl;
+    cout << endl;
 
     return 0;
 }
