@@ -1,21 +1,3 @@
-유향트랙
-플랫폼트랙 : 4
-단방향 쓰루트랙 : 0
-섹션트랙 : 2
-유향 연결트랙 : 8
-
-무향트랙
-양방향 쓰루트랙 : 0
-디포트랙 : 0
-무향 연결트랙 : 0
-
-유향정션
-플랫폼정션 : 8
-유향 연결정션 : 4
-
-무향정션 
-무향 연결정션 : 0
-
 좌측통행
         tsu01
         jcu02 jcd01
@@ -26,66 +8,6 @@ jpu02 p jpu01 jpd03 p jpd04
 tcu02   tcu01 tcd03   tcd04
         jcu01 jcd02
               tsd01
-
-//선언-상행
-track tpu01("tpu01", 70, 200, true);
-track tpu02("tpu02", 70, 200, true);
-
-track tsu01("tsu01", 120, 1500, true);
-
-track tcu01("tcu01", 70, 1, true);
-track tcu02("tcu02", 70, 2, true);
-track tcu03("tcu03", 70, 3, true);
-track tcu04("tcu04", 70, 4, true);
-
-junction jpu01("jpu01", true);
-junction jpu02("jpu02", true);
-junction jpu03("jpu03", true);
-junction jpu04("jpu04", true);
-
-junction jcu01("jcu01", true);
-junction jcu02("jcu02", true);
-//포인팅-상행
-jcu01.settrack1(&tcu01); jcu01.setjunction1(&jpu01);
-jcu01.settrack2(&tcu02); jcu01.setjunction2(&jpu02);
-
-jpu01.settrack1(&tpu01); jpu01.setjunction1(&jpu03);
-jpu02.settrack1(&tpu02); jpu02.setjunction1(&jpu04);
-
-jpu03.settrack1(&tcu03); jpu03.setjunction1(&jcu02);
-jpu04.settrack1(&tcu04); jpu03.setjunction1(&jcu02);
-
-jcu02.settrack1(&tsu01);
-//선언-하행
-track tpd01("tpd01", 70, 200, true);
-track tpd02("tpd02", 70, 200, true);
-
-track tsd01("tsd01", 120, 1500, true);
-
-track tcd01("tcd01", 70, 1, true);
-track tcd02("tcd02", 70, 2, true);
-track tcd03("tcd03", 70, 3, true);
-track tcd04("tcd04", 70, 4, true);
-
-junction jpd01("jpud1", true);
-junction jpd02("jpud2", true);
-junction jpd03("jpud3", true);
-junction jpd04("jpud4", true);
-
-junction jcd1("jcd01", true);
-junction jcd2("jcd02", true);
-//포인팅-하행
-jcd01.settrack1(&tcd01); jcd01.setjunction1(&jpd01);
-jcd01.settrack2(&tcd02); jcd01.setjunction2(&jpd02);
-
-jpd01.settrack1(&tpd01); jpd01.setjunction1(&jpd03);
-jpd02.settrack1(&tpd02); jpd02.setjunction1(&jpd04);
-
-jpd03.settrack1(&tcd03); jpd03.setjunction1(&jcd02);
-jpd04.settrack1(&tcd04); jpd03.setjunction1(&jcd02);
-
-jcd02.settrack1(&tsd01);
-
 우측통행
               tsu01
         jcd01 jcu02
