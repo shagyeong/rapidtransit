@@ -16,7 +16,18 @@ class track{
         int getlength(void);
         bool getdirection(void);
 
-        virtual void hello(void) = 0; //dynamic cast의 다형성을 갖추기 위한(가상함수 테이블 생성용)
+        //파생 클래스 메서드
+        //플랫폼트랙
+        virtual void setnumber(int numberv) = 0;
+        virtual void setcar(int carv) = 0;
+        virtual void setdoor(bool doorv) = 0;
+        virtual int getnumber(void) = 0;
+        virtual int getcar(void) = 0;
+        virtual bool getdoor(void) = 0;
+        //디포트랙
+        virtual void settrain(bool trainv) = 0;
+        virtual bool gettrain(void) = 0;
+
     private:
         string name;
         int length;
@@ -80,8 +91,6 @@ class platformtrack : public track{
         int getnumber(void);
         int getcar(void);
         bool getdoor(void);
-
-        void hello(void);
     private:
         int number; //플랫폼 번호
         int car; //대응 칸수
@@ -108,11 +117,6 @@ bool platformtrack::getdoor(void){
     return door;
 }
 
-void platformtrack::hello(void){
-
-}
-
-
 //throughtrack : 역내 통과 트랙-------------------------------------------------------------------------
 class throughtrack : public track{
     public:
@@ -127,9 +131,25 @@ class sectiontrack : public track{
 //depottrack : 열차 보관 목적의 트랙-------------------------------------------------------------------------
 class depottrack : public track{
     public:
+        depottrack(string namev, int lengthv, bool directionv, bool trainv)
+        :track(namev, lengthv, directionv){
+            train = trainv;
+        }
+
+        void settrain(bool trainv);
+
+        bool gettrain(void);
     private:
         bool train; //true : 주박 열차 있음, false : 주박 열차 없음
 };
+
+void depottrack::settrain(bool trainv){
+    train = trainv;
+}
+
+bool depottrack::gettrain(void){
+    return train;
+}
 
 //connectiontrack : 위에 해당하지 않는 트랙-------------------------------------------------------------------------
 class connectiontrack : public track{
