@@ -1,15 +1,21 @@
 #include<iostream>
 #include<string>
+#include<sstream> //string stream
 using namespace std;
 
-string tablestring(int time){
+string tablestring(int time, string dest, string grade){
+    stringstream ts; //tablestring
+
     int hour = time / 3600; time %= 3600;
     int minute = time / 60; time %= 60;
     int second = time;
 
-    cout << hour << endl;
-    cout << minute << endl;
-    cout << second << endl;
+    ts << hour;   ts << ":";
+    ts << minute; ts << ":";
+    ts << second; ts << " ";
 
-    return "nothing";
+    ts << dest;
+    ts << grade;
+
+    return ts.str();
 }
