@@ -1,13 +1,13 @@
 좌측통행
-        tsu01
-        jcu02 jcd01
-tcu04   tcu03 tcd01   tcd02
-jpu04 p jpu03 jpd01 p jpd02
-tpu02 p tpu01 tpd01 p tpd02
-jpu02 p jpu01 jpd03 p jpd04
-tcu02   tcu01 tcd03   tcd04
-        jcu01 jcd02
-              tsd01
+          tsu01
+          jcu02 jcd01
+tcu04     tcu03 tcd01     tcd02
+jpu04 p p jpu03 jpd01 p p jpd02
+tpu02 p p tpu01 tpd01 p p tpd02
+jpu02 p p jpu01 jpd03 p p jpd04
+tcu02     tcu01 tcd03     tcd04
+          jcu01 jcd02
+                tsd01
 //u                                             //d
 track s000_tpu01("s000_tpu01", 70, 200, true);  track s000_tpd01("s000_tpd01", 70, 200, true);
 track s000_tpu02("s000_tpu02", 70, 200, true);  track s000_tpd02("s000_tpd02", 70, 200, true);
