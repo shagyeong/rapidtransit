@@ -1,96 +1,12 @@
-일산 : k326
-                        jcx02 
-            tsu01       tdx01
-            jcu05       jcx01       jcd01
-            tcu09 tcx01       tcx02 tcd01
-            jcu04                   jcd02
-      tcu08                         tcd02 tcd03
-      jcu03                               jcd03
-tcu07 tcu06 tcu05                         tcd04 tcd05
-jpu06 jpu05 jpu04                   jpd01 jpd02 jpd03
-tpu03 tpu02 tpu01                   tpd01 tpd02 tpd03
-jpu03 jpu02 jpu01                   jpd04 jpd05 jpd06
-tcu04 tcu03                         tcd06 tcd07 tcd08
-      jcu02                               jcd04
-      tcu02 tcu01                         tcd09
-            jcu01                   jcd05
-                                    tsd01
-
-유향트랙
-플랫폼트랙 : 6
-단방향 쓰루트랙 : 0
-섹션트랙 : 2
-유향 연결트랙 : 16
-
-무향트랙
-양방향 쓰루트랙 : 0
-주박트랙 : 1
-무향 연결트랙 : 2
-
-유향정션
-플랫폼정션 : 12
-유향 연결정션 : 10
-
-무향정션
-무향 연결정션 : 2
-
-tpu01
-tpu02
-tpu03
-tpd01
-tpd02
-tpd03
-
--
-
-tsu01
-tsd02
-
-tcu01
-tcu02
-tcu03
-tcu04
-tcu05
-tcu06
-tcu07
-tcu08
-tcd01
-tcd02
-tcd03
-tcd04
-tcd05
-tcd06
-tcd07
-tcd08
-
--
-
-tdx01
-
-tcx01
-tcx02
-
-jpu01
-jpu02
-jpu03
-jpu04
-jpu05
-jpu06
-jpd01
-jpd02
-jpd03
-jpd04
-jpd05
-jpd06
-jcu01
-jcu02
-jcu03
-jcu04
-jcu05
-jcd01
-jcd02
-jcd03
-jcd04
-jcd05
-jcx01
-jcx02
+/*
+역명 : 일산
+역번 : k326
+                            jcx02
+                            tdx01
+                            jcx01
+                tsu01 tcx01       tcx02
+jxx00 x x jxx00 jpu02 4               3 jp201 jxx00 x x jxx00
+txx00 x x txx00 tpu01 4               3 tp201 txx00 x x txx00
+jxx00 x x jxx00 jpu01 4               3 jp202 jxx00 x x jxx00
+                                        tsd01
+*/

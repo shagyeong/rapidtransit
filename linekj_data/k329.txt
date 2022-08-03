@@ -1,68 +1,49 @@
-운정 : k329
-      tsu01
-      jcu02 jcd01
-tcu04 tcu03 tcd01 tcd02
-jpu04 jpu03 jpd01 jpd02
-tpu02 tpu01 tpd01 tpd02
-jpu02 jpu01 jpd03 jpd04
-tcu02 tcu01 tcd03 tcd04
-      jcu01 jcd02
-            tsd01
-유향트랙
-플랫폼트랙 : 4
-단방향 쓰루트랙 : 0
-섹션트랙 : 2
-유향 연결트랙 : 8
+/*
+역명 : 운정
+역번 : k329
+                tsu01
+                jcu02 jcd01
+      tcu04     tcu03 tcd01     tcd02
+jxx00 jpu04 4 3 jpu03 jpd01 2 1 jpd02
+txx00 tpu02 4 3 tpu01 tpd01 2 1 tpd02
+jxx00 jpu02 4 3 jpu01 jpd03 2 1 jpd04
+      tcu02     tcu01 tcd03     tcd04
+                jcu01 jcd02
+                      tsd01
+*/
 
-무향트랙
-양방향 쓰루트랙 : 0
-주박트랙 : 0
-무향 연결트랙 : 0
+//u                                             //d
+track k329_tpu01("k329_tpu01", 70, 200, true);  track k329_tpd01("k329_tpd01", 70, 200, true);
+track k329_tpu02("k329_tpu02", 70, 200, true);  track k329_tpd02("k329_tpd02", 70, 200, true);
+track k329_tcu01("k329_tcu01", 70, 200, true);  track k329_tcd01("k329_tcd01", 70, 200, true);
+track k329_tcu02("k329_tcu02", 70, 200, true);  track k329_tcd02("k329_tcd02", 70, 200, true);
+track k329_tcu03("k329_tcu03", 70, 200, true);  track k329_tcd03("k329_tcd03", 70, 200, true);
+track k329_tcu04("k329_tcu04", 70, 200, true);  track k329_tcd04("k329_tcd04", 70, 200, true);
+track k329_tsu01("k329_tsu01", 70, 900, true);  track k329_tsd01("k329_tsd01", 70, 900, true);
 
-유향정션
-플랫폼정션 : 8
-유향 연결정션 : 4
+junction k329_jpu01("k329_jpu01", true);        junction k329_jpd01("k329_jpd01", true);
+junction k329_jpu02("k329_jpu02", true);        junction k329_jpd02("k329_jpd02", true);
+junction k329_jpu03("k329_jpu03", true);        junction k329_jpd03("k329_jpd03", true);
+junction k329_jpu04("k329_jpu04", true);        junction k329_jpd04("k329_jpd04", true);
+junction k329_jcu01("k329_jcu01", true);        junction k329_jcd01("k329_jcd01", true);
+junction k329_jcu02("k329_jcu02", true);        junction k329_jcd02("k329_jcd02", true);
 
-무향정션
-무향 연결정션 : 0
+k329_jcu01.settrack1(&k329_tcu01);              k329_jcd01.settrack1(&k329_tcd01);
+k329_jcu01.settrack2(&k329_tcu02);              k329_jcd01.settrack2(&k329_tcd02);
+k329_jcu01.setjunction1(&k329_jpu01);           k329_jcd01.setjunction1(&k329_jpd01);
+k329_jcu01.setjunction2(&k329_jpu02);           k329_jcd01.setjunction2(&k329_jpd02);
+k329_jpu01.settrack1(&k329_tpu01);              k329_jpd01.settrack1(&k329_tpd01);
+k329_jpu01.setjunction1(&k329_jpu03);           k329_jpd01.setjunction1(&k329_jpd03);
+k329_jpu02.settrack1(&k329_tpu02);              k329_jpd02.settrack1(&k329_tpd02);
+k329_jpu02.setjunction1(&k329_jpu04);           k329_jpd02.setjunction1(&k329_jpd04);
+k329_jpu03.setjunction1(&k329_jcu02);           k329_jpd03.setjunction1(&k329_jcd02);
+k329_jpu03.settrack1(&k329_tcu03);              k329_jpd03.settrack1(&k329_tcd03);
+k329_jpu04.setjunction1(&k329_jcu02);           k329_jpd04.setjunction1(&k329_jcd02);
+k329_jpu04.settrack1(&k329_tcu04);              k329_jpd04.settrack1(&k329_tcd04);
+k329_tcu02.settrack1(&k329_tsu01);              k329_tcd02.settrack1(&k329_tsd01);
 
-tpu01
-tpu02
-tpd01
-tpd02
-
--
-
-tsu01
-tsd01
-
-tcu01
-tcu02
-tcu03
-tcu04
-tcd01
-tcd02
-tcd03
-tcd04
-
--
-
--
-
--
-
-jpu01
-jpu02
-jpu03
-jpu04
-jpd01
-jpd02
-jpd03
-jpd04
-
-jcu01
-jcu02
-jcd01
-jcd02
-
--
+station k329("운정", "k329");
+k329.setjufirst(&k329_tcu01);
+k329.setjulast(&k329_tcu02);
+k329.setjdfirst(&k329_tcd01);
+k329.setjdlast(&k329_tcd02);

@@ -1,48 +1,26 @@
-탄현 : k327
-tsu01
-jpu02 jpd01
-tpu01 tpd01
-jpu01 jpd02
-      tsd01
-유향트랙
-플랫폼트랙 : 2
-단방향 쓰루트랙 : 0
-섹션트랙 : 2
-유향 연결트랙 : 0
+/*
+역명 : 탄현
+역번 : k327
+  tsu01
+2 jpu02 jpd01 1
+2 tpu01 tpd01 1
+2 jpu01 jpd02 1
+        tsd01
+*/
 
-무향트랙
-양방향 쓰루트랙 : 0
-주박트랙 : 0
-무향 연결트랙 : 0
+//u                                               //d
+track k327_tpu01("k327_tpu01", 70,  200, true);   track k327_tpd01("k327_tpd01", 70,  200, true);
+track k327_tsu01("k327_tsu01", 70, 1300, true);   track k327_tsd01("k327_tsd01", 70, 1300, true);
 
-유향정션
-플랫폼정션 : 4
-유향 연결정션 : 0
+junction k327_jpu01("k327_jpu01", true);          junction k327_jpd01("k327_jpd01", true);
+junction k327_jpu02("k327_jpu02", true);          junction k327_jpd02("k327_jpd02", true);
 
-무향정션
-무향 연결정션 : 0
+k327_jpu01.settrack1(&k327_tpu01);                k327_jpd01.settrack1(&k327_tpd01);
+k327_jpu01.setjunction1(&k327_jpu02);             k327_jpd01.setjunction1(&k327_jpd02);
+k327_jpu02.settrack1(&k327_tsu01);                k327_jpd02.settrack1(&k327_tsd01);
 
-tpu01
-tpd02
-
--
-
-tsu01
-tsd01
-
--
-
--
-
--
-
--
-
-jpu01
-jpu02
-jpd01
-jpd02
-
--
-
--
+station k327("탄현", "k327");
+k327.setjufirst(&k327_jpu01);
+k327.setjulast(&k327_jpu02);
+k327.setjdfirst(&k327_jpd01);
+k327.setjdlast(&k327_jpd02);
