@@ -1,11 +1,10 @@
 #include<iostream>
+#include "../static factors/station.h"
+#include "../dynamic factors/train.h"
+#include "grade.h"
+
 #include<string>
 using namespace std;
-
-//실제로는 다른 디렉토리에서 include
-class station; 
-class grade;
-class train;
 
 class line{
     public:
