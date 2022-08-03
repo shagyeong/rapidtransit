@@ -1,0 +1,16 @@
+                        jcx02 
+            tsu01       tdx01
+            jcu05       jcx01       jcd01
+            tcu09 tcx01       tcx02 tcd01
+            jcu04                   jcd02
+      tcu08                         tcd02 tcd03
+      jcu03                               jcd03
+tcu07 tcu06 tcu05                         tcd04 tcd05
+jpu06 jpu05 jpu04                   jpd01 jpd02 jpd03
+tpu03 tpu02 tpu01                   tpd01 tpd02 tpd03
+jpu03 jpu02 jpu01                   jpd04 jpd05 jpd06
+tcu04 tcu03                         tcd06 tcd07 tcd08
+      jcu02                               jcd04
+      tcu02 tcu01                         tcd09
+            jcu01                   jcd05
+                                    tsd01
