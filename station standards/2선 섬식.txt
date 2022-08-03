@@ -10,3 +10,20 @@ jpd01 p p jpu02
 tpd01 p p tpu01
 jpd02 p p jpu01
 tsd01
+//u                                               //d
+track s000_tpu01("s000_tpu01", 70,  200, true);   track s000_tpd01("s000_tpd01", 70,  200, true);
+track s000_tsu01("s000_tsu01", 70, 1300, true);   track s000_tsd01("s000_tsd01", 70, 1300, true);
+
+junction s000_jpu01("s000_jpu01", true);          junction s000_jpd01("s000_jpd01", true);
+junction s000_jpu02("s000_jpu02", true);          junction s000_jpd02("s000_jpd02", true);
+
+s000_jpu01.settrack1(&s000_tpu01);                s000_jpd01.settrack1(&s000_tpd01);
+s000_jpu01.setjunction1(&s000_jpu02);             s000_jpd01.setjunction1(&s000_jpd02);
+
+s000_jpu02.settrack1(&s000_tsu01);                s000_jpd02.settrack1(&s000_tsd01);
+
+station s000("stationname", "s000");
+s000.setjufirst(&s000_jpu01);
+s000.setjulast(&s000_jpu02);
+s000.setjdfirst(&s000_jpd01);
+s000.setjdlast(&s000_jpd02);
