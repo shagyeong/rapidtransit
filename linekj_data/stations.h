@@ -53,6 +53,6 @@ int main(void){
     k329.setdownstation(k328);
     k328.setdownstation(k327);
     k327.setdownstation(k326);
-    
+
     return 0;
 }

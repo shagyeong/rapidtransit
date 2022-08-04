@@ -16,23 +16,25 @@ jxx00 jpu02 4 3 jpu01 jpd03 2 1 jpd04
                 jcu01 jcd02
                       tsd01
 */
+station k329("운정", "k329");
+
+//u                                             //d
+track k329_tpu01("k329_tpu01", 70, 200, true);  track k329_tpd01("k329_tpd01", 70, 200, true);
+track k329_tpu02("k329_tpu02", 70, 200, true);  track k329_tpd02("k329_tpd02", 70, 200, true);
+track k329_tcu01("k329_tcu01", 70, 200, true);  track k329_tcd01("k329_tcd01", 70, 200, true);
+track k329_tcu02("k329_tcu02", 70, 200, true);  track k329_tcd02("k329_tcd02", 70, 200, true);
+track k329_tcu03("k329_tcu03", 70, 200, true);  track k329_tcd03("k329_tcd03", 70, 200, true);
+track k329_tcu04("k329_tcu04", 70, 200, true);  track k329_tcd04("k329_tcd04", 70, 200, true);
+track k329_tsu01("k329_tsu01", 70, 900, true);  track k329_tsd01("k329_tsd01", 70, 900, true);
+    
+junction k329_jpu01("k329_jpu01", true);        junction k329_jpd01("k329_jpd01", true);
+junction k329_jpu02("k329_jpu02", true);        junction k329_jpd02("k329_jpd02", true);
+junction k329_jpu03("k329_jpu03", true);        junction k329_jpd03("k329_jpd03", true);
+junction k329_jpu04("k329_jpu04", true);        junction k329_jpd04("k329_jpd04", true);
+junction k329_jcu01("k329_jcu01", true);        junction k329_jcd01("k329_jcd01", true);
+junction k329_jcu02("k329_jcu02", true);        junction k329_jcd02("k329_jcd02", true);
+
 int main(void){
-    //u                                             //d
-    track k329_tpu01("k329_tpu01", 70, 200, true);  track k329_tpd01("k329_tpd01", 70, 200, true);
-    track k329_tpu02("k329_tpu02", 70, 200, true);  track k329_tpd02("k329_tpd02", 70, 200, true);
-    track k329_tcu01("k329_tcu01", 70, 200, true);  track k329_tcd01("k329_tcd01", 70, 200, true);
-    track k329_tcu02("k329_tcu02", 70, 200, true);  track k329_tcd02("k329_tcd02", 70, 200, true);
-    track k329_tcu03("k329_tcu03", 70, 200, true);  track k329_tcd03("k329_tcd03", 70, 200, true);
-    track k329_tcu04("k329_tcu04", 70, 200, true);  track k329_tcd04("k329_tcd04", 70, 200, true);
-    track k329_tsu01("k329_tsu01", 70, 900, true);  track k329_tsd01("k329_tsd01", 70, 900, true);
-    
-    junction k329_jpu01("k329_jpu01", true);        junction k329_jpd01("k329_jpd01", true);
-    junction k329_jpu02("k329_jpu02", true);        junction k329_jpd02("k329_jpd02", true);
-    junction k329_jpu03("k329_jpu03", true);        junction k329_jpd03("k329_jpd03", true);
-    junction k329_jpu04("k329_jpu04", true);        junction k329_jpd04("k329_jpd04", true);
-    junction k329_jcu01("k329_jcu01", true);        junction k329_jcd01("k329_jcd01", true);
-    junction k329_jcu02("k329_jcu02", true);        junction k329_jcd02("k329_jcd02", true);
-    
     k329_jcu01.settrack1(&k329_tcu01);              k329_jcd01.settrack1(&k329_tcd01);
     k329_jcu01.settrack2(&k329_tcu02);              k329_jcd01.settrack2(&k329_tcd02);
     k329_jcu01.setjunction1(&k329_jpu01);           k329_jcd01.setjunction1(&k329_jpd01);
@@ -47,7 +49,6 @@ int main(void){
     k329_jpu04.settrack1(&k329_tcu04);              k329_jpd04.settrack1(&k329_tcd04);
     k329_jcu02.settrack1(&k329_tsu01);              k329_jcd02.settrack1(&k329_tsd01);
     
-    station k329("운정", "k329");
     k329.setjufirst(&k329_jcu01);
     k329.setjulast(&k329_jcu02);
     k329.setjdfirst(&k329_jcd01);
