@@ -8,7 +8,7 @@ using namespace std;
 
 class line{
     public:
-        line();
+        line(string colorv, string namev, bool directionv);
 
     private:
         string color; //노선 상징색
@@ -19,3 +19,12 @@ class line{
         grade* grades; //첫 번째 등급의 포인터
         train* trains; //첫 번째 열차의 포인터
 };
+
+line::line(string colorv, string namev, bool directionv){
+    color = colorv;
+    name = namev;
+    direction = directionv;
+    stations = NULL;
+    grades = NULL;
+    trains = NULL;
+}
