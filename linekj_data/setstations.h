@@ -4,15 +4,10 @@
 #include "../static factors/junction.h"
 #include "../static factors/station.h"
 
-#include "./k335.h"
-#include "./k334.h"
-#include "./k333.h"
-#include "./k331.h"
-#include "./k330.h"
-#include "./k329.h"
-#include "./k328.h"
-#include "./k327.h"
-#include "./k326.h"
+#include "./setk329.h"
+#include "./setk328.h"
+#include "./setk327.h"
+#include "./setk326.h"
 /*
 역명 역번
 문산 k335
@@ -44,15 +39,13 @@
 신촌 p314
 서울 p313
 */
-int main(void){
-    k335.setdownstation(k334);
-    k334.setdownstation(k333);
-    k333.setdownstation(k331);
-    k331.setdownstation(k330);
-    k330.setdownstation(k329);
+void setstations(void){
+    setk329();
+    setk328();
+    setk327();
+    setk326();
+
     k329.setdownstation(k328);
     k328.setdownstation(k327);
     k327.setdownstation(k326);
-
-    return 0;
 }

@@ -34,7 +34,7 @@ junction k329_jpu04("k329_jpu04", true);        junction k329_jpd04("k329_jpd04"
 junction k329_jcu01("k329_jcu01", true);        junction k329_jcd01("k329_jcd01", true);
 junction k329_jcu02("k329_jcu02", true);        junction k329_jcd02("k329_jcd02", true);
 
-int main(void){
+void setk329(void){
     k329_jcu01.settrack1(&k329_tcu01);              k329_jcd01.settrack1(&k329_tcd01);
     k329_jcu01.settrack2(&k329_tcu02);              k329_jcd01.settrack2(&k329_tcd02);
     k329_jcu01.setjunction1(&k329_jpu01);           k329_jcd01.setjunction1(&k329_jpd01);
@@ -53,6 +53,4 @@ int main(void){
     k329.setjulast(&k329_jcu02);
     k329.setjdfirst(&k329_jcd01);
     k329.setjdlast(&k329_jcd02);
-
-    return 0;
 }

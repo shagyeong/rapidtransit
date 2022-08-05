@@ -24,7 +24,7 @@ track k326_tsu01("k326_tsu01", 70, 1300, true);   track k326_tsd01("k326_tsd01",
 junction k326_jpu01("k326_jpu01", true);          junction k326_jpd01("k326_jpd01", true);
 junction k326_jpu02("k326_jpu02", true);          junction k326_jpd02("k326_jpd02", true);
 
-int main(void){
+void setk326(void){
     k326_jpu01.settrack1(&k326_tpu01);                k326_jpd01.settrack1(&k326_tpd01);
     k326_jpu01.setjunction1(&k326_jpu02);             k326_jpd01.setjunction1(&k326_jpd02);
     k326_jpu02.settrack1(&k326_tsu01);                k326_jpd02.settrack1(&k326_tsd01);
@@ -33,6 +33,4 @@ int main(void){
     k326.setjulast(&k326_jpu02);
     k326.setjdfirst(&k326_jpd01);
     k326.setjdlast(&k326_jpd02);
-
-    return 0;
 }
