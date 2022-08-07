@@ -16,6 +16,11 @@ jxx jxx jxx x x jxx jpu 4 3 jpu jpd 2 1 jpd jxx
 운정 k329
 야당 k328
 탄현 k327
+  tsu01
+2 jpu02 jpd01 1
+2 tpu01 tpd01 1
+2 jpu01 jpd02 1
+        tsd01
 일산 k326
                             jxx00
                             txx00
