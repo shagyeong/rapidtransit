@@ -1,40 +1,123 @@
 전체 배선도
+
 문산 k335
                             tsu
                             jcu jcd
                     tcu     tcu tcd     tcd
-jxx jxx jxx x x jxx jpu 4 3 jpu jpd 2 1 jpd jxx
-txx txx txx x x txx tpu 4 3 tpu tpd 2 1 tpd txx
-jxx jxx jxx x x jxx jpu 4 3 jpu jpd 2 1 jpd jxx
+xxx xxx xxx x x xxx jpu 4 3 jpu jpd 2 1 jpd xxx
+xxx xxx xxx x x xxx tpu 4 3 tpu tpd 2 1 tpd xxx
+xxx xxx xxx x x xxx jpu 4 3 jpu jpd 2 1 jpd xxx
                     tcu     tcu tcd     tcd
                             jcu jcd
                                 tsd
 파주 k334
+                            tsu
+                            jcu jcd
+                    tcu     tcu tcd     tcd
+                    jpu 4 3 jpu jpd 2 1 jpd
+                    tpu 4 3 tpu tpd 2 1 tpd
+                    jpu 4 3 jpu jpd 2 1 jpd
+                    tcu     tcu tcd     tcd
+                            jcu jcd
+                                tsd
 월롱 k333
+                            tsu
+                            jcu jcd
+                    tcu     tcu tcd     tcd
+            xxx xxx jpu 4 3 jpu jpd 2 1 jpd
+            xxx xxx tpu 4 3 tpu tpd 2 1 tpd
+            xxx xxx jpu 4 3 jpu jpd 2 1 jpd
+                    tcu     tcu tcd     tcd
+                            jcu jcd
+                                tsd
 금촌 k331
+                            tsu
+                            jcu jcd
+                    tcu     tcu tcd     tcd
+                    jpu 4 3 jpu jpd 2 1 jpd
+                    tpu 4 3 tpu tpd 2 1 tpd
+                    jpu 4 3 jpu jpd 2 1 jpd
+                    tcu     tcu tcd     tcd
+                            jcu jcd
+                                tsd
 금릉 k330
+                            tsu
+                          2 jpu jpd 1
+                          2 tpu tpd 1
+                          2 jpu jpd 1
+                                tsd
 운정 k329
+                            tsu
+                            jcu jcd
+                    tcu     tcu tcd     tcd
+                xxx jpu 4 3 jpu jpd 2 1 jpd
+                xxx tpu 4 3 tpu tpd 2 1 tpd
+                xxx jpu 4 3 jpu jpd 2 1 jpd
+                    tcu     tcu tcd     tcd
+                            jcu jcd
+                                tsd
 야당 k328
+                            tsu
+                          2 jpu jpd 1
+                          2 tpu tpd 1
+                          2 jpu jpd 1
+                                tsd
 탄현 k327
-  tsu01
-2 jpu02 jpd01 1
-2 tpu01 tpd01 1
-2 jpu01 jpd02 1
-        tsd01
+                            tsu
+                          2 jpu jpd 1
+                          2 tpu tpd 1
+                          2 jpu jpd 1
+                                tsd
 일산 k326
-                            jxx00
-                            txx00
-                            jxx00
-                tsu01 txx00       txx00
-jxx00 x x jxx00 jpu02 4               3 jp201 jxx00 x x jxx00
-txx00 x x txx00 tpu01 4               3 tp201 txx00 x x txx00
-jxx00 x x jxx00 jpu01 4               3 jp202 jxx00 x x jxx00
-                                        tsd01
+                              jxx 
+                              txx 
+                              jxx 
+                      tsu txx     txx
+          jxx x x jxx jpu 4         3 jpd jxx x x jxx
+          txx x x txx tpu 4         3 tpd txx x x txx
+          jxx x x jxx jpu 4         3 jpd jxx x x jxx
+                                      tsd
 풍산 k325
+                            tsu
+                          2 jpu jpd 1
+                          2 tpu tpd 1
+                          2 jpu jpd 1
+                                tsd
 백마 k324
+                            tsu
+                            jcu jcd
+                    tcu     tcu tcd     tcd
+                    jpu 4 3 jpu jpd 2 1 jpd
+                    tpu 4 3 tpu tpd 2 1 tpd
+                    jpu 4 3 jpu jpd 2 1 jpd
+                    tcu     tcu tcd     tcd
+                            jcu jcd
+                                tsd
 곡산 k323
+                            tsu
+                          2 jpu jpd 1
+                          2 tpu tpd 1
+                          2 jpu jpd 1
+                                tsd
 대곡 k322
+
+                    tsu
+                    jpu 4 x xxx xxx  x 1 jpd
+                    tpu 4 x xxx xxx  x 1 tpd
+                    jpu 4 x xxx xxx  x 1 jpd
+                                         tsd
+                                
+                                
 능곡 k321
+                tsu
+                jcu                         jcd
+        tcu     tcu                         tcd     tcd
+    xxx jpu 8 7 jpu xxx x x xxx xxx x x xxx jpd 2 1 jpd xxx
+    xxx tpu 8 7 tpu xxx x x xxx xxx x x xxx tpd 2 1 tpd xxx
+    xxx jpu 8 7 jpu xxx x x xxx xxx x x xxx jpd 2 1 jpd xxx
+        tcu     tcu                         tcd     tcd
+                jcu                         jcd
+                                            tsd
 행신 k320
 강매 k319
 화전 k318
