@@ -185,6 +185,14 @@ xxx xxx xxx x x xxx jpu 4 3 jpu jpd 2 1 jpd xxx
                           2 jpu jpd 1
                                 tsd
 용산 k310
-
+                        2 jpu jtx jpd 1
+                        2 tpu ttx tpd 1
+                        2 jpu jtx jpd 1
 신촌 p314
+                  jtu jtu jpu 1 2 jpd jtd jtd jtd
+                  ttu ttu tpu 1 2 tpd ttd ttd ttd
+                  jtu jtu jpu 1 2 jpd jtd jtd jtd
 서울 p313
+                             jpx 1
+                             tpx 1
+                             jpx 1
