@@ -119,15 +119,71 @@ xxx xxx xxx x x xxx jpu 4 3 jpu jpd 2 1 jpd xxx
                 jcu                         jcd
                                             tsd
 행신 k320
+                            tsu
+                            jcu jcd
+                    tcu     tcu tcd     tcd
+                    jpu 4 3 jpu jpd 2 1 jpd
+                    tpu 4 3 tpu tpd 2 1 tpd
+                    jpu 4 3 jpu jpd 2 1 jpd
+                                tsd     tsd
 강매 k319
+                    tsu     tsu
+                    jpu 4 3 jpu jpd 2 1 jpd
+                    tpu 4 3 tpu tpd 2 1 tpd
+                    jpu 4 3 jpu jpd 2 1 jpd
+                                tsd     tsd
 화전 k318
+                      tsu                   tsu
+                    4 jpu jpd 3           2 jpu jpd 1
+                    4 tpu tpd 3           2 tpu tpd 1
+                    4 jpu jpd 3           2 jpu jpd 1
+                          tsd                   tsd
 수색 k317
+                      tsu
+                      jcu jcd
+              tcu     tcu tcd     tcd       tsu
+              jpu 6 5 jpu jpd 4 3 jpd     2 jpu jpd 1
+              tpu 6 5 tpu tpd 4 3 tpd     2 tpu tpd 1
+              jpu 6 5 jpu jpd 4 3 jpd     2 jpu jpd 1
+              tcu     tcu tcd     tcd           tsd
+                      jcu jcd
+                          tsd
 상암 k316
+                      tsu                   tsu
+                    4 jpu jpd 3           2 jpu jpd 1
+                    4 tpu tpd 3           2 tpu tpd 1
+                    4 jpu jpd 3           2 jpu jpd 1
+                          tsd                   tsd
 가좌 k315
+                      tsu                   tsu
+                    4 jpu jpd 3           2 jpu jpd 1
+                    4 tpu tpd 3           2 tpu tpd 1
+                    4 jpu jpd 3           2 jpu jpd 1
+                          tsd                   tsd
 홍대 k314
+                            tsu
+                          2 jpu jpd 1
+                          2 tpu tpd 1
+                          2 jpu jpd 1
+                                tsd
 서강 k313
+                            tsu
+                          2 jpu jpd 1
+                          2 tpu tpd 1
+                          2 jpu jpd 1
+                                tsd
 공덕 k312
+                            tsu
+                          2 jpu jpd 1
+                          2 tpu tpd 1
+                          2 jpu jpd 1
+                                tsd
 효창 k311
+                            tsu
+                          2 jpu jpd 1
+                          2 tpu tpd 1
+                          2 jpu jpd 1
+                                tsd
 용산 k310
 
 신촌 p314
