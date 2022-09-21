@@ -6,48 +6,39 @@ using namespace std;
 class track{
     public:
         track();
-        track(string namev, int limitv, int lengthv, bool directionv);
+        track(string namev, int lengthv, bool directionv);
         track(const track& trackv);
 
         void setname(string namev);
-        void setlimit(int limitv);
         void setlength(int lengthv);
         void setdirection(bool directionv);
 
         string getname(void);
-        int getlimit(void);
         int getlength(void);
         bool getdirection(void);
     private:
         string name;
-        int limit; //속력 제한(km/h)
         int length;
         bool direction; //true : 유향, false : 무향
 };
 track::track(){
     name = "no named track";
-    limit = 0;
     length = 0;
     direction = NULL;
 }
-track::track(string namev, int limitv, int lengthv, bool directionv){
+track::track(string namev, int lengthv, bool directionv){
     name = namev;
-    limit = limitv;
     length = lengthv;
     direction = directionv;
 }
 track::track(const track& trackv){
     name = trackv.name;
-    limit = trackv.limit;
     length = trackv.length;
     direction = trackv.direction;
 }
 
 void track::setname(string namev){
     name = namev;
-}
-void track::setlimit(int limitv){
-    limit = limitv;
 }
 void track::setlength(int lengthv){
     length = lengthv;
@@ -57,9 +48,6 @@ void track::setdirection(bool directionv){
 }
 string track::getname(void){
     return name;
-}
-int track::getlimit(void){
-    return limit;
 }
 int track::getlength(void){
     return length;
