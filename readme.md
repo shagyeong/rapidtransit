@@ -132,3 +132,15 @@
 		* 부울형의 문열림 방향 멤버 변수
 		* true : 왼쪽 문열림, false : 오른쪽 문열림
 -->
+## demo
+### grades
+             k k k k k k k k k k k k k k k k k k k k k k k k k
+             3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+             3 3 3 3 3 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1
+             5 4 3 1 0 9 8 7 6 5 4 3 2 1 0 9 8 7 6 5 4 3 2 1 0
+ALLSTOP      o o o o o o o o o o o o o o o o o o o o o o o o o
+RAPID        o     o     o o o   o   o   o       o   o   o   o
+S. RAPID     o     o         o       o   o       o           o
+SPLIT A      o     o o o o o                     o   o   o   o
+SPLIT B                      o o o   o           o   o   o   o
+SPLIT C                                o o o     o   o   o   o
