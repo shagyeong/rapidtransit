@@ -134,13 +134,22 @@
 -->
 ## demo
 ### grades
-             k k k k k k k k k k k k k k k k k k k k k k k k k
-             3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
-             3 3 3 3 3 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1
-             5 4 3 1 0 9 8 7 6 5 4 3 2 1 0 9 8 7 6 5 4 3 2 1 0
-ALLSTOP      o o o o o o o o o o o o o o o o o o o o o o o o o
-RAPID        o     o     o o o   o   o   o       o   o   o   o
-S. RAPID     o     o         o       o   o       o           o
-SPLIT A      o     o o o o o                     o   o   o   o
-SPLIT B                      o o o   o           o   o   o   o
-SPLIT C                                o o o     o   o   o   o
+-------------k k k k k k k k k k k k k k k k k k k k k k k k k
+
+-------------3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+
+-------------3 3 3 3 3 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1
+
+-------------5 4 3 1 0 9 8 7 6 5 4 3 2 1 0 9 8 7 6 5 4 3 2 1 0
+
+ALLSTOP------o o o o o o o o o o o o o o o o o o o o o o o o o
+
+RAPID--------o - - o - - o o o - o - o - o - - - o - o - o - o
+
+S. RAPID-----o - - o - - - - o - - - o - o - - - o - - - - - o
+
+SPLIT A------o - - o o o o o - - - - - - - - - - o - o - o - o
+
+SPLIT B----------------------o o o - o - - - - - o - o - o - o
+
+SPLIT C--------------------------------o o o - - o - o - o - o
