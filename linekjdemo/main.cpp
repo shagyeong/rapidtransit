@@ -23,5 +23,9 @@ int main(void){
 
     reachtime(k329, k326, kj001, lim);
 
+    cout << endl;
+    
+    reachtime(k329, k328, kj001, lim);
+
     return 0;
 }

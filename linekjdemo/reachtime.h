@@ -15,7 +15,7 @@
 void reachtime(station ss, station es, train t, int* limits){
     /* 순회자 */
     station* iter_s = &ss;
-    junction* iter_j = ss.getjdfirst();
+    junction* iter_j = ss.getjdlast();
 
     /* 제원 참조 생략 */
 
@@ -46,12 +46,12 @@ void reachtime(station ss, station es, train t, int* limits){
     double t_track; //트랙 단위 운전 시격
     
     /*역 단위 순회 */
-    while(iter_s->getdownstation() != NULL){
+    while(iter_s != &es){
         /* 구간 표시 */
         cout << iter_s->getname() << "~" << iter_s->getdownstation()->getname() << endl;
         
         /* 정션 단위 순회 */
-        while(iter_j != iter_s->getjdlast()){
+        while(iter_j != iter_s->getdownstation()->getjdlast()){
             length = iter_j->gettrack1()->getlength();
             v_lim = *limits;
             v_lim_n = *(++limits);
@@ -100,7 +100,7 @@ void reachtime(station ss, station es, train t, int* limits){
                     v_bor = v_lim_n;
                 }
 
-                cout << t_track << endl;
+                cout << "case gen 1 : " << t_track << endl;
             }
             else{
                 /* peculiar case : flat 구간이 나타나기 전 감속해야 한다.*/
@@ -112,7 +112,7 @@ void reachtime(station ss, station es, train t, int* limits){
                     t_track = t_acc;
                     v_bor = v_x;
 
-                    cout << t_track << endl;
+                    cout << "case pec 1 : " << t_track << endl;
                 }
                 else{
                     /* peculiar 2 : 다음 한계 속력까지 감속해야 함 */
@@ -143,9 +143,12 @@ void reachtime(station ss, station es, train t, int* limits){
                     t_track = t_acc + t_dec;
                     v_bor = v_lim_n;
 
-                    cout << t_track << endl;
+                    cout << "case pec 2 : " << t_track << endl;
                 }
             }
+            iter_j = iter_j->getjunction1();
         }
+        iter_s = iter_s->getdownstation();
+        cout << "hello" << endl;
     }
 }
