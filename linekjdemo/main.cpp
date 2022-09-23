@@ -10,7 +10,7 @@ int main(void){
 
     cout << k329.getname() << endl;
     cout << k328.getname() << endl;
-    //cout << k329.getdownstation()->getname() << endl;
+    cout << k329.getdownstation()->getname() << endl;
     /*
     junction* jiter = k329.getjdfirst();
     station* siter = &k329;
