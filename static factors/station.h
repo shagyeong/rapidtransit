@@ -1,6 +1,3 @@
-/* 역 포인팅에 대해 무한 반복의 가능성 */
-/* setstation 적절히 수정 바람 */
-
 #pragma once
 #include<iostream>
 #include<string>
@@ -16,6 +13,7 @@ class station{
         void transit(junction* transit0); //정션으로 정차 위치 지정-가중치(트랙)의 거리를 차례로 출력
 
         /* 단, 상, 하행역 설정 뿐 아니라 '단위역 이어붙이기'(각 역의 끝 정션을 포인팅)를 겸함 */
+        /* 무한 루프 해결을 위해 상역의 하역 포인팅과 하역의 상역 포인팅을 각각 수행해야 함 */
         void setupstation(station us); //단위역 이어붙이기-상행
         void setdownstation(station ds); //단위역 이어붙이기-하행
 
@@ -70,23 +68,12 @@ station::station(string namev, string numberv){
 }
 
 void station::setupstation(station us){
-    /* 역 포인팅 */
     upstation = &us;
-    us.setdownstation(*this);
-    
-    /* 정션 포인팅 */
     julast->setjunction1(us.getjufirst());
-    us.jdlast->setjunction1(jdfirst);
 }
 void station::setdownstation(station ds){
-    /* 역 포인팅 */
     downstation = &ds;
-    ds.setupstation(*this);
-
-    /* 정션 포인팅 */
-    jdlast->setjunction1(ds.getjdfirst());
-    ds.julast->setjunction1(jufirst);
-    
+    jdlast->setjunction1(ds.getjdfirst());    
 }
 
 void station::setname(string namev){
