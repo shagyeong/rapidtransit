@@ -17,9 +17,9 @@ jxx00 x x jxx00 jpu01 4               3 jp202 jxx00 x x jxx00
 */
 station k326("일산", "k326");
 
-//u                                               //d
-track k326_tpu01("k326_tpu01", 70,  200, true);   track k326_tpd01("k326_tpd01", 70,  200, true);
-track k326_tsu01("k326_tsu01", 70, 1300, true);   track k326_tsd01("k326_tsd01", 70, 1300, true);
+//u                                           //d
+track k326_tpu01("k326_tpu01",  200, true);   track k326_tpd01("k326_tpd01",  200, true);
+track k326_tsu01("k326_tsu01", 1300, true);   track k326_tsd01("k326_tsd01", 1300, true);
 
 junction k326_jpu01("k326_jpu01", true);          junction k326_jpd01("k326_jpd01", true);
 junction k326_jpu02("k326_jpu02", true);          junction k326_jpd02("k326_jpd02", true);

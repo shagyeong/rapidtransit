@@ -14,9 +14,9 @@
 */
 station k328("야당", "k328");
 
-//u                                               //d
-track k328_tpu01("k328_tpu01", 70,  200, true);   track k328_tpd01("k328_tpd01", 70,  200, true);
-track k328_tsu01("k328_tsu01", 70, 1300, true);   track k328_tsd01("k328_tsd01", 70, 1300, true);
+//u                                           //d
+track k328_tpu01("k328_tpu01",  200, true);   track k328_tpd01("k328_tpd01",  200, true);
+track k328_tsu01("k328_tsu01", 1300, true);   track k328_tsd01("k328_tsd01", 1300, true);
 
 junction k328_jpu01("k328_jpu01", true);          junction k328_jpd01("k328_jpd01", true);
 junction k328_jpu02("k328_jpu02", true);          junction k328_jpd02("k328_jpd02", true);

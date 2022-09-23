@@ -40,12 +40,21 @@
 서울 p313
 */
 void setstations(void){
+    /* 각 역 트랙과 정션 설정 */
     setk329();
     setk328();
     setk327();
     setk326();
 
+    /* 단위역 이어붙이기-하행*/
     k329.setdownstation(k328);
-    k328.setdownstation(k327);
+    k328.setdownstation(k327);    
     k327.setdownstation(k326);
+    //k326.setdownstation(k325);
+
+    /* 단위역 이어붙이기-상행 */
+    //k329.setupstation(k330);
+    k328.setupstation(k329);
+    k327.setupstation(k328);
+    k326.setupstation(k327);
 }
