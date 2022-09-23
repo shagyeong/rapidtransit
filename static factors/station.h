@@ -14,8 +14,8 @@ class station{
 
         /* 단, 상, 하행역 설정 뿐 아니라 '단위역 이어붙이기'(각 역의 끝 정션을 포인팅)를 겸함 */
         /* 무한 루프 해결을 위해 상역의 하역 포인팅과 하역의 상역 포인팅을 각각 수행해야 함 */
-        void setupstation(station us); //단위역 이어붙이기-상행
-        void setdownstation(station ds); //단위역 이어붙이기-하행
+        void setupstation(station* us); //단위역 이어붙이기-상행
+        void setdownstation(station* ds); //단위역 이어붙이기-하행
 
         void setname(string namev);
         void setnumber(string numberv);
@@ -67,13 +67,13 @@ station::station(string namev, string numberv){
     downstation = NULL;
 }
 
-void station::setupstation(station us){
-    upstation = &us;
-    julast->setjunction1(us.getjufirst());
+void station::setupstation(station* us){
+    upstation = us;
+    julast->setjunction1(us->getjufirst());
 }
-void station::setdownstation(station ds){
-    downstation = &ds;
-    jdlast->setjunction1(ds.getjdfirst());    
+void station::setdownstation(station* ds){
+    downstation = ds;
+    jdlast->setjunction1(ds->getjdfirst());    
 }
 
 void station::setname(string namev){
