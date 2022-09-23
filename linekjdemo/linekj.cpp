@@ -7,5 +7,5 @@
 #include "../abstract factors/line.h"
 
 int main(void){
-    line linekj("77C4A3", "경의중앙선", true);
+    line linekj("77C4A3", "경의중앙선", true, 52);
 }

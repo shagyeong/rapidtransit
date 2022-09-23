@@ -3,29 +3,25 @@
 #include "../static factors/junction.h"
 #include "../static factors/station.h"
 
+#include "../dynamic factors/train.h"
+
 #include "./setstations.h"
+#include "./reachtime.h"
 
 int main(void){
     setstations();
 
-    cout << k329.getname() << endl;
-    cout << k328.getname() << endl;
-    cout << k329.getdownstation()->getname() << endl;
-    /*
-    junction* jiter = k329.getjdfirst();
-    station* siter = &k329;
+    train kj001("kj001", 3.0, 3.5, 110, 110, 8);
 
-    //운정~일산 1선정차
-    while(jiter != NULL){
-        cout << jiter->gettrack1()->getname() << endl;
-        jiter = jiter->getjunction1();
-    }
-    
-    while(siter != NULL){
-        cout << siter->getname() << endl;
-        siter = siter->getdownstation();
-    }
-    */
+    int limits[] = {70, 70, 70, 70, 70,
+                    70, 70, 70, 70, 70,
+                    70, 70, 70, 70, 70,
+                    70, 70, 70, 70, 70,
+                    70, 70, 70, 70, 70};
+
+    int* lim = &limits[0];
+
+    reachtime(k329, k326, kj001, lim);
 
     return 0;
 }
