@@ -46,7 +46,7 @@ void reachtime(station ss, station es, train t, int* limits){
     double t_track; //트랙 단위 운전 시격
     
     /*역 단위 순회 */
-    while(iter_s != &es){
+    while(iter_s->getname() != es.getname()){
         /* 구간 표시 */
         cout << iter_s->getname() << "~" << iter_s->getdownstation()->getname() << endl;
         
@@ -149,6 +149,5 @@ void reachtime(station ss, station es, train t, int* limits){
             iter_j = iter_j->getjunction1();
         }
         iter_s = iter_s->getdownstation();
-        cout << "hello" << endl;
     }
 }
