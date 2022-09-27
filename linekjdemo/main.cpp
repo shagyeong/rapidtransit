@@ -6,7 +6,7 @@
 #include "../dynamic factors/train.h"
 
 #include "./setstations.h"
-#include "./reachtime.h"
+#include "../operating factors/reachtime.h"
 
 int main(void){
     setstations();
