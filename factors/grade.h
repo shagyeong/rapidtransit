@@ -11,5 +11,4 @@ class grade{
     private:
         line l;
         string name; //등급 명칭
-        station stops[l.getstops()];
 };
