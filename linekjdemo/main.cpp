@@ -1,12 +1,12 @@
 #include<iostream>
-#include "../static factors/track.h"
-#include "../static factors/junction.h"
-#include "../static factors/station.h"
+#include "../factors/track.h"
+#include "../factors/junction.h"
+#include "../factors/station.h"
 
-#include "../dynamic factors/train.h"
+#include "../factors/train.h"
 
 #include "./setstations.h"
-#include "../operating factors/reachtime.h"
+#include "../functions/reachtime.h"
 
 int main(void){
     setstations();

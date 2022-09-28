@@ -1,8 +1,8 @@
 #pragma once
 #include<iostream>
-#include "../static factors/track.h"
-#include "../static factors/junction.h"
-#include "../static factors/station.h"
+#include "../factors/track.h"
+#include "../factors/junction.h"
+#include "../factors/station.h"
 
 #include "./setk329.h"
 #include "./setk328.h"
