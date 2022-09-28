@@ -3,11 +3,10 @@
 #include<iostream>
 #include<math.h>
 
-#include "../static factors/track.h"
-#include "../static factors/junction.h"
-#include "../static factors/station.h"
-
-#include "../dynamic factors/train.h"
+#include "../factors/track.h"
+#include "../factors/junction.h"
+#include "../factors/station.h"
+#include "../factors/train.h"
 
 /* 상역->하역을 가정-반대 방향에 대한 오버로드는 추후에 구현 바람 */
 /* 속력 제한에 대해 임시적으로 정수 배열을 읽어오는 것으로 구현 */
