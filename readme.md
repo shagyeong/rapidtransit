@@ -133,4 +133,4 @@
 		* true : 왼쪽 문열림, false : 오른쪽 문열림
 -->
 # demo
-<img src="./linekjdemo/demo.png">
+<img src="./gui/demo.png">
