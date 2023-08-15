@@ -131,6 +131,7 @@
 	* platformtrack class
 		* 부울형의 문열림 방향 멤버 변수
 		* true : 왼쪽 문열림, false : 오른쪽 문열림
--->
+
 # demo
 <img src="./gui/demo.png">
+-->
