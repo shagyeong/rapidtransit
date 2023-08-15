@@ -1,10 +1,30 @@
-             k k k k k k k k k k k k k k k k k k k k k k k k k
-             3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
-             3 3 3 3 3 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1
-             5 4 3 1 0 9 8 7 6 5 4 3 2 1 0 9 8 7 6 5 4 3 2 1 0
-ALLSTOP      o o o o o o o o o o o o o o o o o o o o o o o o o
-RAPID        o     o     o o o   o   o   o       o   o   o   o
-S. RAPID     o     o         o       o   o       o           o
-SPLIT A      o     o o o o o                     o   o   o   o
-SPLIT B                      o o o   o           o   o   o   o
-SPLIT C                                o o o     o   o   o   o
+        S   R       A   B   N   N   N
+        R   1               8   4   S
+        8   2
+
+            8 + 4        
+k335    o   o   o
+k334
+k333
+k331    o   o   o
+k330
+k329
+k328        o   o
+k327
+k326    o   o   o
+k325
+k324        o   o
+k323
+k322    o   o   o
+k321        
+k320            o
+k319
+k318
+k317
+k316    o   o   o  
+k315            o
+k314    o   o
+k313
+k312    o   o
+k311
+k310    o   o
