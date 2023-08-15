@@ -1,30 +1,30 @@
-        S   R       A   B   N   N   N
-        R   1               8   4   S
+        S   R               A   B        N   N   N
+        R   1                            8   4   S
         8   2
 
             8 + 4        
-k335    o   o   o
-k334
-k333
-k331    o   o   o
-k330
-k329
-k328        o   o
-k327
-k326    o   o   o
-k325
-k324        o   o
-k323
-k322    o   o   o
-k321        
-k320            o
-k319
-k318
-k317
-k316    o   o   o  
-k315            o
-k314    o   o
-k313
-k312    o   o
-k311
-k310    o   o
+k335    o   o   o           o            o   o   o
+k334                        o            o   o   o
+k333                        o            o   o   o
+k331    o   o   o                        o   o   o
+k330                        o            o   o   o
+k329                        o            o   o   o
+k328        o   o                        o   o   o
+k327                        o            o   o   o
+k326    o   o   o               o        o   o   o
+k325                            o        o   o   o
+k324        o   o               o        o   o   o
+k323                            o        o   o   o
+k322    o   o   o               o        o   o   o
+k321                                     o   o
+k320        o   o                        o   o
+k319                                     o   o
+k318                                     o   o
+k317                                     o   o
+k316    o   o   o           o   o        o   o
+k315            o                        o   o
+k314    o   o               o   o        o
+k313                                     o
+k312    o   o               o   o        o
+k311                                     o
+k310    o   o               o   o        o
